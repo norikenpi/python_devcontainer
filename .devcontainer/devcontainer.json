@@ -12,5 +12,9 @@
             ]
         }
     },
+    "runArgs": [
+        "-v", "/run/host-services/ssh-auth.sock:/run/host-services/ssh-auth.sock",
+        "-e", "SSH_AUTH_SOCK=/run/host-services/ssh-auth.sock"
+    ],    
     "postCreateCommand": "pip3 install beautifulsoup4 && pip3 install html5lib"
 }
